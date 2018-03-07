@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {SiteDataProvider} from './site-data.service.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+    constructor(private siteData: SiteDataProvider) {}
+
+    title = this.siteData.title;
+    year = this.siteData.year;
+    siteName = this.siteData.siteName;
 }

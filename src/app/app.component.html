@@ -1,20 +1,100 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+<div class="container" xmlns="http://www.w3.org/1999/html">
 
+  <div class="row">
+    <div class="page-header">
+
+      <div class="logo" >
+        <i class="fas fa-shield-alt fa-9x"></i>
+      </div>
+
+      <div class="site-name" >
+        <h1> {{ title }} </h1>
+      </div>
+
+      <div class="page-header-cta">
+        <span style="color: #169256; font-weight: bold;">San Francisco Area</span><br>
+        <span>AUGUST 9 - 12, 2018</span><br>
+        <span><a [routerLink]="['/new-reunion']">Learn More...</a></span>
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="row">
+    <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2 navbar" role="navigation">
+      <ul class="nav nav-tabs">
+        <li role="presentation"
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{exact: true}">
+          <a target="_self" rel="noopener" [routerLink]="['']">Home</a>
+        </li>
+        <li role="presentation"
+            routerLinkActive="active">
+          <a target="_self" rel="noopener" [routerLink]="['/new-reunion']">New Reunion</a>
+        </li>
+        <li role="presentation"
+            routerLinkActive="active">
+          <a target="_self" rel="noopener" [routerLink]="['/past-reunions']">Past Reunions</a>
+        </li>
+        <li role="presentation"
+            routerLinkActive="active">
+          <a target="_self" rel="noopener" [routerLink]="['/general-info']">General Info</a>
+        </li>
+        <li role="presentation"
+            routerLinkActive="active">
+          <a target="_self" rel="noopener" [routerLink]="['/committees']">Committees</a>
+        </li>
+        <li role="presentation"
+            routerLinkActive="active">
+          <a target="_self" rel="noopener" [routerLink]="['/mind-your-business']">In Business</a>
+        </li>
+        <li role="presentation"
+            routerLinkActive="active">
+          <a target="_self" rel="noopener" [routerLink]="['/contact-us']">Contact Us</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+</div>
+
+<div class="container">
+
+      <div class="row">
+    <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+
+</div>
+
+<div class="footer">
+  <div class="container">
+    <div class="row">
+  <div class="footer-nav col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
+    <div class="col-sm-4 col-md-4 widget footer-nav-subdiv">
+      <h3>Pricedawson.com</h3>
+      <p>Not gone or forgotten, visit the original Pricedawson.com site.
+      Visit <a href="http://www.pricedawson.com">Pricedawson.com</a></p>
+    </div><hr class="footer-hr">
+
+    <div class="col-sm-4 col-md-4 widget footer-nav-subdiv">
+      <h3>San Francisco 2018</h3>
+      <p><a [routerLink]="['/new-reunion']">Register</a> for the 2018 reunion now!
+    </div><hr class="footer-hr">
+
+    <div class="col-sm-4 col-md-4 widget footer-nav-subdiv">
+      <h3>Contact us</h3>
+      <p>Marvin: marvintdawson@gmail.com;<br> ph: (770) 530-2929<br>
+      Greg: gmiles@gmail.com;<br> ph: (313) 408-0629</p>
+    </div><hr class="footer-hr">
+  </div>
+  <div class="site-footer">
+    The {{ siteName }} {{ year }} Family Reunion site is a Progressive Web Site, designed using Angular, TypeScript, HTML5 & CSS with a NoSQL data schema.<br>  The site was developed by webmaster / software engineer
+    <a href="http://www.marvintdawson.com">Marvin Dawson</a> & webmaster <a href="http://www.cypheredwolf.com">Greg Miles</a>.
+  </div>
+    </div>
+  </div>
+</div>
