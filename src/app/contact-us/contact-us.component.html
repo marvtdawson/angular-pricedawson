@@ -1,48 +1,62 @@
 <div class="container">
   <div class="row">
     <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
-      <form [formGroup]="contactusForm" >
 
-        <div class="form-group">
-          <label for="uname">Name:</label>
-          <input type="text"
-                  class="form-control"
-                  id="uname"
-                  formControlName="uname">
+      <form [formGroup]="contactusForm" (ngSubmit)="onSubmit()">
+        <div formGroupName="memberData">
+          <div class="form-group">
+            <label for="uname">Name:</label>
+            <input type="text"
+                    class="form-control"
+                    id="uname"
+                    formControlName="uname">
+            <span *ngIf="!contactusForm.get('memberData.uname').valid && contactusForm.get('memberData.uname').touched"
+                  class="help-block">Please Enter a Valid Name.</span>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email"
+                    class="form-control"
+                    id="email"
+                    email
+                    formControlName="email">
+            <span *ngIf="!contactusForm.get('memberData.email').valid && contactusForm.get('memberData.email').touched"
+                  class="help-block">Please Enter a Valid Email Address.</span>
+          </div>
+
+          <div class="form-group">
+            <label for="state">State:</label>
+            <input type="text"
+                   class="form-control"
+                   id="state"
+                   formControlName="state">
+            <span *ngIf="!contactusForm.get('memberData.state').valid && contactusForm.get('memberData.state').touched"
+                  class="help-block">Please Enter a Valid State.</span>
+          </div>
+
+          <div class="form-group">
+            <label for="city">City:</label>
+            <input type="text"
+                   class="form-control"
+                   id="city"
+                   formControlName="city">
+            <span *ngIf="!contactusForm.get('memberData.city').valid && contactusForm.get('memberData.city').touched"
+                  class="help-block">Please Enter a Valid City.</span>
+          </div>
         </div>
 
-        <div class="form-group">
-          <label for="email">Email:</label>
-          <input type="email"
-                  class="form-control"
-                  id="email"
-                  email
-                  formControlName="email">
-        </div>
+          <div class="radio" *ngFor="let gender of genders">
+            <label>
+                <input type="radio"
+                   [value]="gender"
+                    formControlName="gender">{{ gender }}
+            </label>
+          </div>
+          <span *ngIf="!contactusForm.valid && contactusForm.touched"
+                class="help-block">Please Complete All Fields.</span>
 
-        <div class="form-group">
-          <label for="state">State:</label>
-          <input type="text"
-                 class="form-control"
-                 id="state"
-                 formControlName="state">
-        </div>
 
-        <div class="form-group">
-          <label for="city">City:</label>
-          <input type="text"
-                 class="form-control"
-                 id="city"
-                 formControlName="city">
-        </div>
-
-        <div class="radio" *ngFor="let gender of genders">
-          <label>
-              <input type="radio"
-                 [value]="gender"
-                  formControlName="gender">{{ gender }}
-          </label>
-        </div>
 
        <button class="btn btn-primary"
                type="submit">Submit</button>

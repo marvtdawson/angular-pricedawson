@@ -22,21 +22,46 @@
 
   </div>
 
-  <div class="row">
-    <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2 navbar" role="navigation">
-      <ul class="nav nav-tabs">
+  <div class="container-fluid">
+    <div class="navbar navbar-default">
+      <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2 navbar" role="navigation">
+        <ul class="nav navbar-nav">
         <li role="presentation"
             routerLinkActive="active"
             [routerLinkActiveOptions]="{exact: true}">
-          <a target="_self" rel="noopener" [routerLink]="['']">Home</a>
+          <a target="_self" rel="noopener"
+             [routerLink]="['']">Home</a>
         </li>
         <li role="presentation"
             routerLinkActive="active">
-          <a target="_self" rel="noopener" [routerLink]="['/new-reunion']">New Reunion</a>
+          <a target="_self" rel="noopener"
+             [routerLink]="['/new-reunion']"
+             class="dropdown-toggle"
+             data-toggle="dropdown"
+             role="button"
+             aria-haspopup="true"
+             aria-expanded="false">New Reunion <span class="caret"></span></a>
         </li>
         <li role="presentation"
-            routerLinkActive="active">
-          <a target="_self" rel="noopener" [routerLink]="['/past-reunions']">Past Reunions</a>
+            routerLinkActive="active" class="dropdown">
+          <a target="_self" rel="noopener"
+             [routerLink]="['/past-reunions']"
+             class="dropdown-toggle"
+             data-toggle="dropdown"
+             role="button"
+             aria-haspopup="true"
+             aria-expanded="false">Past Reunions <span class="caret"></span></a>
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="dropdown-menu">
+              <li><a href="#">Action</a></li>
+              <li><a href="#">Another action</a></li>
+              <li><a href="#">Something else here</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="#">Separated link</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="#">One more separated link</a></li>
+            </ul>
+          </div>
         </li>
         <li role="presentation"
             routerLinkActive="active">
@@ -46,6 +71,10 @@
             routerLinkActive="active">
           <a target="_self" rel="noopener" [routerLink]="['/committees']">Committees</a>
         </li>
+          <li role="presentation"
+              routerLinkActive="active">
+            <a target="_self" rel="noopener" [routerLink]="['/family-profiles']">Family</a>
+          </li>
         <li role="presentation"
             routerLinkActive="active">
           <a target="_self" rel="noopener" [routerLink]="['/mind-your-business']">In Business</a>
@@ -55,6 +84,7 @@
           <a target="_self" rel="noopener" [routerLink]="['/contact-us']">Contact Us</a>
         </li>
       </ul>
+      </div>
     </div>
   </div>
 

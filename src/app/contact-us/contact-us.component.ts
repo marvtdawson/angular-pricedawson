@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {FormControl, FormGroup} from '@angular/forms';
-import { ReactiveFormsModule } from '@angular/forms';
+import {FormControl, FormGroup, Validators} from '@angular/forms';
 
 @Component({
   selector: 'app-contact-us',
@@ -15,14 +14,21 @@ export class ContactUsComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    this.contactusForm =  new FormGroup({
-      'uname': new FormControl(null),
-      'email': new FormControl(null),
-      'state': new FormControl(null),
-      'city': new FormControl(null),
-      'gender': new FormControl('male')
 
+    this.contactusForm =  new FormGroup({
+
+      memberData: new FormGroup({
+        'uname': new FormControl(null, Validators.required),
+        'email': new FormControl(null, [Validators.required, Validators.email]),
+        'state': new FormControl(null, Validators.required),
+        'city': new FormControl(null, Validators.required)
+      }),
+      'gender': new FormControl('male')
     });
+  }
+
+  onSubmit(){
+    console.log(this.contactusForm);
   }
 
 }

@@ -16,6 +16,7 @@ import { MindYourBusinessComponent } from './mind-your-business/mind-your-busine
 import { MemberzComponent } from './memberz/memberz.component';
 import { UserComponent } from './memberz/user/user.component';
 import { CommitteesCityComponent } from './committees/committeescity/committeescity.component';
+import { FamilyProfilesComponent } from './family-profiles/family-profiles.component';
 
 
 
@@ -27,9 +28,11 @@ const appRoutes: Routes = [
   {path: 'past-reunions', component: PastReunionsComponent},
   {path: 'general-info', component: GeneralInfoComponent},
   {path: 'contact-us', component: ContactUsComponent},
-  {path: 'committees', component: CommitteesComponent},
-  {path: 'committees/:id/city', component: CommitteesCityComponent},
-  {path: 'mind-your-business', component: MindYourBusinessComponent}
+  {path: 'committees', component: CommitteesComponent, children: [
+      {path: 'committees/:id/city', component: CommitteesCityComponent}
+    ]},
+  {path: 'mind-your-business', component: MindYourBusinessComponent},
+  {path: 'family-profiles', component: FamilyProfilesComponent}
 ];
 
 @NgModule({
@@ -44,7 +47,8 @@ const appRoutes: Routes = [
     MindYourBusinessComponent,
     MemberzComponent,
     UserComponent,
-    CommitteesCityComponent
+    CommitteesCityComponent,
+    FamilyProfilesComponent
   ],
   imports: [
     BrowserModule,
