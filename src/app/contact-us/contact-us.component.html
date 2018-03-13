@@ -1,9 +1,13 @@
 <div class="container">
+
   <div class="row">
+
     <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
 
-      <form [formGroup]="contactusForm" (ngSubmit)="onSubmit()">
+      <form [formGroup]="contactusForm" (ngSubmit)="onSubmit()" >
+
         <div formGroupName="memberData">
+
           <div class="form-group">
             <label for="uname">Name:</label>
             <input type="text"
@@ -44,19 +48,18 @@
             <span *ngIf="!contactusForm.get('memberData.city').valid && contactusForm.get('memberData.city').touched"
                   class="help-block">Please Enter a Valid City.</span>
           </div>
-        </div>
 
-          <div class="radio" *ngFor="let gender of genders">
-            <label>
-                <input type="radio"
-                   [value]="gender"
-                    formControlName="gender">{{ gender }}
-            </label>
+          <div class="form-group">
+            <label for="comment">Comment:</label>
+            <textarea type="text"
+                   class="form-control"
+                   id="comment"
+                      formControlName="comment"></textarea>
+            <span *ngIf="!contactusForm.get('memberData.comment').valid && contactusForm.get('memberData.comment').touched"
+                  class="help-block">Please Enter a Comment Below.</span>
           </div>
-          <span *ngIf="!contactusForm.valid && contactusForm.touched"
-                class="help-block">Please Complete All Fields.</span>
 
-
+        </div>
 
        <button class="btn btn-primary"
                type="submit">Submit</button>

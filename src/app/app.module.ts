@@ -2,6 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule} from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import {ContactusService} from '../services/contactus.service';
 
 import { AppComponent } from './app.component';
 import { PastReunionsComponent } from './past-reunions/past-reunions.component';
@@ -53,9 +55,10 @@ const appRoutes: Routes = [
   imports: [
     BrowserModule,
     RouterModule.forRoot(appRoutes),
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
-  providers: [SiteDataProvider],
+  providers: [SiteDataProvider, ContactusService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
