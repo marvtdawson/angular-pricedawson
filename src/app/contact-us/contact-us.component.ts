@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators} from '@angular/forms';
 import { ContactusModel } from '../../models/contactus.model';
 import { ContactusService } from '../../services/contactus.service';
+import { DataStorageService } from '../../services/data-storage.service';
 
 @Component({
   selector: 'app-contact-us',
@@ -16,7 +17,8 @@ export class ContactUsComponent implements OnInit {
   genders = ['male', 'female'];
   contactusForm: FormGroup;
 
-  constructor(private contactusService: ContactusService) { }
+  constructor(private contactusService: ContactusService,
+              private dataStorageService: DataStorageService) { }
   ngOnInit() {
 
     this.contactusForm =  new FormGroup({
@@ -33,7 +35,7 @@ export class ContactUsComponent implements OnInit {
 
   onSubmit() {
     console.log(this.contactusForm);
-    this.contactusService.addNewComment();
+    this.dataStorageService.storeContactusComments();
   }
 
 }

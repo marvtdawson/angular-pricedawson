@@ -1,94 +1,7 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div class="container" xmlns="http://www.w3.org/1999/html">
+<!--div class="container" xmlns="http://www.w3.org/1999/html"></div -->
 
-  <div class="row">
-    <div class="page-header">
-
-      <div class="logo" >
-        <i class="fas fa-shield-alt fa-9x"></i>
-      </div>
-
-      <div class="site-name" >
-        <h1> {{ title }} </h1>
-      </div>
-
-      <div class="page-header-cta">
-        <span style="color: #169256; font-weight: bold;">San Francisco Area</span><br>
-        <span>AUGUST 9 - 12, 2018</span><br>
-        <span><a [routerLink]="['/new-reunion']">Learn More...</a></span>
-      </div>
-
-    </div>
-
-  </div>
-
-  <div class="container-fluid">
-    <div class="navbar navbar-default">
-      <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2 navbar" role="navigation">
-        <ul class="nav navbar-nav">
-        <li role="presentation"
-            routerLinkActive="active"
-            [routerLinkActiveOptions]="{exact: true}">
-          <a target="_self" rel="noopener"
-             [routerLink]="['']">Home</a>
-        </li>
-        <li role="presentation"
-            routerLinkActive="active">
-          <a target="_self" rel="noopener"
-             [routerLink]="['/new-reunion']"
-             class="dropdown-toggle"
-             data-toggle="dropdown"
-             role="button"
-             aria-haspopup="true"
-             aria-expanded="false">New Reunion <span class="caret"></span></a>
-        </li>
-        <li role="presentation"
-            routerLinkActive="active" class="dropdown">
-          <a target="_self" rel="noopener"
-             [routerLink]="['/past-reunions']"
-             class="dropdown-toggle"
-             data-toggle="dropdown"
-             role="button"
-             aria-haspopup="true"
-             aria-expanded="false">Past Reunions <span class="caret"></span></a>
-          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="dropdown-menu">
-              <li><a href="#">Action</a></li>
-              <li><a href="#">Another action</a></li>
-              <li><a href="#">Something else here</a></li>
-              <li role="separator" class="divider"></li>
-              <li><a href="#">Separated link</a></li>
-              <li role="separator" class="divider"></li>
-              <li><a href="#">One more separated link</a></li>
-            </ul>
-          </div>
-        </li>
-        <li role="presentation"
-            routerLinkActive="active">
-          <a target="_self" rel="noopener" [routerLink]="['/general-info']">General Info</a>
-        </li>
-        <li role="presentation"
-            routerLinkActive="active">
-          <a target="_self" rel="noopener" [routerLink]="['/committees']">Committees</a>
-        </li>
-          <li role="presentation"
-              routerLinkActive="active">
-            <a target="_self" rel="noopener" [routerLink]="['/family-profiles']">Family</a>
-          </li>
-        <li role="presentation"
-            routerLinkActive="active">
-          <a target="_self" rel="noopener" [routerLink]="['/mind-your-business']">In Business</a>
-        </li>
-        <li role="presentation"
-            routerLinkActive="active">
-          <a target="_self" rel="noopener" [routerLink]="['/contact-us']">Contact Us</a>
-        </li>
-      </ul>
-      </div>
-    </div>
-  </div>
-
-</div>
+<app-header></app-header>
 
 <div class="container">
 
@@ -100,31 +13,4 @@
 
 </div>
 
-<div class="footer">
-  <div class="container">
-    <div class="row">
-  <div class="footer-nav col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
-    <div class="col-sm-4 col-md-4 widget footer-nav-subdiv">
-      <h3>Pricedawson.com</h3>
-      <p>Not gone or forgotten, visit the original Pricedawson.com site.
-      Visit <a href="http://www.pricedawson.com">Pricedawson.com</a></p>
-    </div><hr class="footer-hr">
-
-    <div class="col-sm-4 col-md-4 widget footer-nav-subdiv">
-      <h3>San Francisco 2018</h3>
-      <p><a [routerLink]="['/new-reunion']">Register</a> for the 2018 reunion now!
-    </div><hr class="footer-hr">
-
-    <div class="col-sm-4 col-md-4 widget footer-nav-subdiv">
-      <h3>Contact us</h3>
-      <p>Marvin: marvintdawson@gmail.com;<br> ph: (770) 530-2929<br>
-      Greg: gmiles@gmail.com;<br> ph: (313) 408-0629</p>
-    </div><hr class="footer-hr">
-  </div>
-  <div class="site-footer">
-    The {{ siteName }} {{ year }} Family Reunion site is a Progressive Web Site, designed using Angular, TypeScript, HTML5 & CSS with a NoSQL data schema.<br>  The site was developed by webmaster / software engineer
-    <a href="http://www.marvintdawson.com">Marvin Dawson</a> & webmaster <a href="http://www.cypheredwolf.com">Greg Miles</a>.
-  </div>
-    </div>
-  </div>
-</div>
+<app-footer></app-footer>

@@ -3,7 +3,8 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule} from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import {ContactusService} from '../services/contactus.service';
+import { ContactusService } from '../services/contactus.service';
+import { DataStorageService } from '../services/data-storage.service';
 
 import { AppComponent } from './app.component';
 import { PastReunionsComponent } from './past-reunions/past-reunions.component';
@@ -19,6 +20,8 @@ import { MemberzComponent } from './memberz/memberz.component';
 import { UserComponent } from './memberz/user/user.component';
 import { CommitteesCityComponent } from './committees/committeescity/committeescity.component';
 import { FamilyProfilesComponent } from './family-profiles/family-profiles.component';
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
 
 
 
@@ -50,7 +53,9 @@ const appRoutes: Routes = [
     MemberzComponent,
     UserComponent,
     CommitteesCityComponent,
-    FamilyProfilesComponent
+    FamilyProfilesComponent,
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
@@ -58,7 +63,7 @@ const appRoutes: Routes = [
     ReactiveFormsModule,
     HttpClientModule
   ],
-  providers: [SiteDataProvider, ContactusService],
+  providers: [SiteDataProvider, ContactusService, DataStorageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

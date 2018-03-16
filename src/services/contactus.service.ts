@@ -9,10 +9,10 @@ export class ContactusService {
 
   constructor(private http: HttpClient) { }
 
-  addNewComment(newContactComments: ContactusModel) {
+  addNewComment() {
     // this.contactComments.push(newContactComments);
     // console.log(this.contactComments);
-    return this.http.post('http://localhost:4200/pricedawson', newContactComments);
+    //return this.http.post('http://localhost:4200', newContactComments);
   }
 
 }
