@@ -1,0 +1,26 @@
+.jumbotron-wrapper{
+  margin: 0 auto 0;
+  text-align: center;
+}
+.jumbotron-img{
+  width: 75%;
+  margin: 0 auto 0;
+}
+.main-content-wrapper {
+  width: 75%;
+  margin: 0 auto 10px;
+  min-height: 505px;
+}
+.thumbnail-wrapper{
+  width: 100%;
+  text-align: center;
+  margin: 0 auto 0;
+}
+.thumbnail{
+  width: 100%;
+  min-height: 315px;
+  margin: 30px 0 0 120px;
+}
+.thumbnail-img{
+  max-height: 300px;
+}

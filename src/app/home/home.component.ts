@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {SiteDataProvider} from '../site-data.service.service';
+import {SiteDataProvider} from '../../services/site-data.service.service';
 import { Router} from '@angular/router';
 
 @Component({

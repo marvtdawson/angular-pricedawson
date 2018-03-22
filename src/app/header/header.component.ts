@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {SiteDataProvider} from '../site-data.service.service';
+import {SiteDataProvider} from '../../services/site-data.service.service';
+import {AuthService} from '../../services/auth-service';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -12,9 +14,19 @@ export class HeaderComponent implements OnInit {
   year = this.siteData.year;
   siteName = this.siteData.siteName;
 
-  constructor(private siteData: SiteDataProvider) { }
+  constructor(private siteData: SiteDataProvider, private authService: AuthService, private route: Router) { }
 
   ngOnInit() {
+  }
+
+  onLogin() {
+    // this.authService.login();
+    this.route.navigate(['/signin']);
+  }
+
+  onLogout() {
+    // this.authService.logout();
+    this.route.navigate(['/signout']);
   }
 
 }
