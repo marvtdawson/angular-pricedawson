@@ -31,11 +31,13 @@ export class ContactUsComponent implements OnInit {
         'comment': new FormControl(null, Validators.required)
       })
     });
+    console.log('memberData');
   }
 
-  onSubmit() {
+  onSubmit(memberData) {
+
     console.log(this.contactusForm);
-    this.dataStorageService.storeContactusComments();
+    this.dataStorageService.storeContactusComments(memberData);
   }
 
 }

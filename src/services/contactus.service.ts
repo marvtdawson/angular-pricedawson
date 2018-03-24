@@ -5,14 +5,14 @@ import {HttpClient} from '@angular/common/http';
 @Injectable()
 export class ContactusService {
 
-  // private contactComments: ContactusModel[] = [];
+  private contactComments: ContactusModel[] = [];
 
   constructor(private http: HttpClient) { }
 
-  addNewComment() {
-    // this.contactComments.push(newContactComments);
-    // console.log(this.contactComments);
-    //return this.http.post('http://localhost:4200', newContactComments);
+  addNewComment(newContactComments) {
+    this.contactComments.push(newContactComments);
+    console.log(this.contactComments);
+    return this.http.post('http://localhost:4200', newContactComments);
   }
 
 }

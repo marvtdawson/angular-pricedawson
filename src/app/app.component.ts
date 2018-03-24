@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataStorageService } from '../services/data-storage.service';
 import * as firebase from 'firebase';
 
 @Component({
@@ -8,12 +9,7 @@ import * as firebase from 'firebase';
 })
 export class AppComponent implements OnInit{
 
-  /*constructor(private siteData: SiteDataProvider) {
-  /*fibase.initializeApp({
-    apiKey: 'AIzaSyCKKBpUCZpE2m9Y0A4bl40GnqSFyb1p2nk',
-    authDomain: 'pricedawson-98f0f.firebaseapp.com',
-  });
-    }*/
+  constructor(private dataStorage: DataStorageService) {}
 
   ngOnInit(){
     firebase.initializeApp({

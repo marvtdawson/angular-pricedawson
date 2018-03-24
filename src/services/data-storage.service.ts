@@ -6,13 +6,12 @@ import { ContactusService } from './contactus.service';
 @Injectable()
 export class DataStorageService {
 
-  contact
-
   constructor(private http: HttpClient,
               private contactusService: ContactusService) {}
 
-  storeContactusComments() {
-    this.http.put('https://pricedawson-98f0f.firebaseio.com/contactus.json', this.contactusService.addNewComment());
-}
+  storeContactusComments(memberData) {
+    this.http.put('https://pricedawson-98f0f.firebaseio.com/contactus.json', memberData);
+    // this.http.put('https://pricedawson-98f0f.firebaseio.com/contactus.json', this.contactusService.addNewComment());
+  }
 
 }
