@@ -24,10 +24,10 @@ export class SignupComponent implements OnInit {
     });
   }
 
- /* onSignUp(form: NgForm) {
-      const email = form.value.email;
+ onSignUp() {
+      /*const email = form.value.email;
       const password = form.value.password;
-      this.firebaseAuth.signupUser(email, password);
-  }*/
+      this.firebaseAuth.signupUser(email, password);*/
+  }
 
 }
