@@ -46,8 +46,12 @@
 .footer-nav h1, h3, h5{
   color: #ffffff;
 }
+.footer-wrapper{
+  width: 80%;
+  margin: 0 auto 0;
+}
 .footer-nav-subdiv{
-  width: 25%;
+  width: 20%;
   margin-left: 115px;
 }
 .footer-hr{
@@ -55,8 +59,8 @@
   display: none;
 }
 .site-footer{
-  margin: 165px auto 0;
-  width: 61%;
+  margin: 15px auto 0;
+  width: 45%;
   color: #bebebe;
   text-align: center;
 }

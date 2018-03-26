@@ -9,7 +9,7 @@ import { FirebaseAuth } from '../firebase.auth';
 })
 export class SignupComponent implements OnInit {
 
-  signUpForm = FormGroup;
+  signUpForm: FormGroup;
 
 
   constructor(private firebaseAuth: FirebaseAuth) { }

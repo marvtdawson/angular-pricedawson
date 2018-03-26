@@ -24,12 +24,6 @@
   <div class="container-fluid">
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-left">
-          <!--li role="presentation"
-              routerLinkActive="active"
-              [routerLinkActiveOptions]="{exact: true}">
-            <a target="_self" rel="noopener"
-               [routerLink]="['']">Home</a>
-          </li-->
           <li role="presentation"
               routerLinkActive="active">
             <a target="_self" rel="noopener"
@@ -91,21 +85,18 @@
             <a target="_self" rel="noopener" [routerLink]="['/contact-us']">Contact Us</a>
           </li>
         </ul>
-        <ul class="nav navbar-nav navbar-right">
-          <li role="presentation"
-              routerLinkActive="active">
-            <a target="_self" rel="noopener" [routerLink]="['/signin']">Login</a>
-          </li>
+        <ul class="login-nav">
           <li role="presentation"
               routerLinkActive="active">
             <a target="_self" rel="noopener" [routerLink]="['/signout']">Logout</a>
+          </li>
+          <li role="presentation"
+              routerLinkActive="active">
+            <a target="_self" rel="noopener" [routerLink]="['/signin']">Login</a>
           </li>
         </ul>
       </div>
   </div>
 </nav>
-<!--div id="nav-login-links">
-  <button class="btn btn-default" (click)="onLogin()">Login</button>
-  <button class="btn btn-default" (click)="onLogout()">Logout</button>
-</div-->
+
 

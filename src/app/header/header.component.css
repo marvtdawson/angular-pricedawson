@@ -12,7 +12,7 @@
 }
 .page-header-cta{
   width: 25%;
-  height: 115px;
+  height: 125px;
   float: right;
   text-align:center;
   margin: -10px auto 0;
@@ -51,7 +51,7 @@
 .navbar-nav {
   margin: 0 auto 0;
   float: none;
-  width: 48%;
+  width: 53%;
 }
 .nav-tabs>li {
   float: left;
@@ -60,6 +60,17 @@
 }
 .nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
   text-align: center;
+}
+.login-nav{
+  float: right;
+  position: relative;
+  z-index: 25;
+  margin: 15px 0 0 0;
+}
+.login-nav>li{
+  float: right;
+  margin: 0 0 0 30px;
+  list-style-type: none;
 }
 #nav-login-links{
   float: right;
