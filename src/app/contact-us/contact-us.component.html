@@ -53,9 +53,11 @@
           <div class="form-group">
             <label for="comment">Comment:</label>
             <textarea type="text"
+                      rows="10"
+                      cols="20"
                    class="form-control"
                    id="comment"
-                      formControlName="comment"></textarea>
+                   formControlName="comment"></textarea>
             <span *ngIf="!contactusForm.get('memberData.comment').valid && contactusForm.get('memberData.comment').touched"
                   class="help-block">Please Enter a Comment Below.</span>
           </div>
