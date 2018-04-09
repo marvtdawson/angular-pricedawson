@@ -28,7 +28,7 @@
   margin: 0 0 0 60px;
 }
 .logo-img{
-  width: 10%;
+  width: 75%;
 }
 .fa-9x {
   font-size: 7em;
@@ -114,5 +114,25 @@
     float: right;
     margin-top: 3px;
     display: none;
+  }
+}
+@media(max-width: 414px){
+  .logo{
+    float: left;
+    width: 8%;
+    margin: 0 0 0 60px;
+  }
+  .logo-img{
+    width: 75%;
+  }
+}
+@media(max-width: 320px){
+  .logo{
+    float: left;
+    width: 8%;
+    margin: 0 0 0 60px;
+  }
+  .logo-img{
+    width: 75%;
   }
 }
