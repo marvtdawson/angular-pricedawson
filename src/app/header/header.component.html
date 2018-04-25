@@ -28,42 +28,16 @@
           <li role="presentation"
               routerLinkActive="active">
             <a target="_self" rel="noopener"
-               [routerLink]="['/new-reunion']"
+               [routerLink]="['/reunion']"
                class="dropdown-toggle"
                data-toggle="dropdown"
                role="button"
                aria-haspopup="true"
-               aria-expanded="false">New Reunion <span class="caret"></span></a>
+               aria-expanded="false">Reunions <span class="caret"></span></a>
             <ul class="dropdown-menu">
-              <li><a href="#">Action</a></li>
-              <li><a href="#">Another action</a></li>
-              <li><a href="#">Something else here</a></li>
-              <li role="separator" class="divider"></li>
-              <li><a href="#">Separated link</a></li>
-              <li role="separator" class="divider"></li>
-              <li><a href="#">One more separated link</a></li>
+              <li><a [routerLink]="['/new-reunions']">New Reunion</a></li>
+              <li><a [routerLink]="['/past-reunions']">Past Reunion</a></li>
             </ul>
-          </li>
-          <li role="presentation"
-              routerLinkActive="active" class="dropdown">
-            <a target="_self" rel="noopener"
-               [routerLink]="['/past-reunions']"
-               class="dropdown-toggle"
-               data-toggle="dropdown"
-               role="button"
-               aria-haspopup="true"
-               aria-expanded="false">Past Reunions <span class="caret"></span>
-            </a>
-              <ul class="dropdown-menu">
-                <li><a href="#">Action</a></li>
-                <li><a href="#">Another action</a></li>
-                <li><a href="#">Something else here</a></li>
-                <li role="separator" class="divider"></li>
-                <li><a href="#">Separated link</a></li>
-                <li role="separator" class="divider"></li>
-                <li><a href="#">One more separated link</a></li>
-              </ul>
-
           </li>
           <li role="presentation"
               routerLinkActive="active">
@@ -79,7 +53,7 @@
           </li>
           <li role="presentation"
               routerLinkActive="active">
-            <a target="_self" rel="noopener" [routerLink]="['/mind-your-business']">In Business</a>
+            <a target="_self" rel="noopener" [routerLink]="['/mind-your-business']">Family Businesses</a>
           </li>
           <li role="presentation"
               routerLinkActive="active">
