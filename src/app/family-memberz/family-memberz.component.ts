@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-memberz',
-  templateUrl: './memberz.component.html',
-  styleUrls: ['./memberz.component.css']
+  selector: 'app-family-memberz',
+  templateUrl: './family-memberz.component.html',
+  styleUrls: ['./family-memberz.component.css']
 })
-export class MemberzComponent {
+export class FamilyMemberzComponent {
 
    user = [
     {
