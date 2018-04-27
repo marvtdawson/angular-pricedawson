@@ -16,6 +16,7 @@ import { FirebaseAuth } from './auth/firebase.auth';
 import { AppComponent } from './app.component';
 import { FamilyMemberzModule } from './family-memberz/family-memberz.module';
 import { ReunionsModule } from './reunions/reunions.module';
+import { AuthFormsModule } from './auth/auth-forms.module'; // login, sign up, sign out
 
 import { GeneralInfoComponent } from './general-info/general-info.component';
 import { HomeComponent } from './home/home.component';
@@ -23,9 +24,7 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
 import { UserComponent } from './family-memberz/user/user.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
-import { SignupComponent } from './auth/signup/signup.component';
-import { SignoutComponent } from './auth/signout/signout.component';
-import { SigninComponent } from './auth/signin/signin.component';
+import {DropdownDirective} from '../shared/dropdown.directive';
 
 
 @NgModule({
@@ -37,9 +36,7 @@ import { SigninComponent } from './auth/signin/signin.component';
     UserComponent,
     HeaderComponent,
     FooterComponent,
-    SignupComponent,
-    SigninComponent,
-    SignoutComponent
+    DropdownDirective
   ],
   imports: [
     BrowserModule,
@@ -49,6 +46,7 @@ import { SigninComponent } from './auth/signin/signin.component';
     AppRoutingModule,
     FamilyMemberzModule,
     ReunionsModule,
+    AuthFormsModule,
     ServiceWorkerModule.register('./ngsw.json', {})
   ],
   providers: [SiteDataProvider, ContactusService, DataStorageService, AuthGuard, AuthService, FirebaseAuth],

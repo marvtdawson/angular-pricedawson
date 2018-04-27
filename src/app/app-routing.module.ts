@@ -24,9 +24,10 @@ const appRoutes: Routes = [
   {path: 'family-memberz', canActivate: [AuthGuard], component: FamilyMemberzComponent, children: [
       {path: ':id/:name', component: UserComponent}
     ]},
-  {path: 'reunions', component: ReunionsComponent},
-  {path: 'new-reunion', component: NewReunionComponent},
-  {path: 'past-reunions', component: PastReunionsComponent},
+  {path: 'reunions', component: ReunionsComponent, children: [
+    {path: ':new-reunion', component: NewReunionComponent},
+    {path: ':past-reunions', component: PastReunionsComponent}
+    ]},
   {path: 'general-info', component: GeneralInfoComponent},
   {path: 'contact-us', component: ContactUsComponent},
   {path: 'family-committees', canActivate: [AuthGuard], component: FamilyCommitteesComponent, children: [
