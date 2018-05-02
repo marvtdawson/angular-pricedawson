@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 import { ContactusService } from '../services/contactus.service';
 import { DataStorageService } from '../services/data-storage.service';
@@ -47,7 +48,7 @@ import {DropdownDirective} from '../shared/dropdown.directive';
     FamilyMemberzModule,
     ReunionsModule,
     AuthFormsModule,
-    ServiceWorkerModule.register('./ngsw.json', {})
+    ServiceWorkerModule.register('./ngsw-config.json', {enabled: environment.production})
   ],
   providers: [SiteDataProvider, ContactusService, DataStorageService, AuthGuard, AuthService, FirebaseAuth],
   bootstrap: [AppComponent]
