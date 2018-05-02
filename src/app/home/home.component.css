@@ -9,3 +9,12 @@
   margin: 0 auto 10px;
   min-height: 505px;
 }
+@media(max-width: 768px) {
+  .main-content-wrapper {
+    width: 100%;
+  }
+  .footer-wrapper{
+    width: 100%;
+    margin: 0 auto 0;
+  }
+}

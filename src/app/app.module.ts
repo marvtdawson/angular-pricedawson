@@ -26,6 +26,7 @@ import { UserComponent } from './family-memberz/user/user.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import {DropdownDirective} from '../shared/dropdown.directive';
+import {FamilyMembersComponent} from './family-memberz/family-profiles/family-members/family-members.component';
 
 
 @NgModule({
@@ -37,7 +38,8 @@ import {DropdownDirective} from '../shared/dropdown.directive';
     UserComponent,
     HeaderComponent,
     FooterComponent,
-    DropdownDirective
+    DropdownDirective,
+    FamilyMembersComponent,
   ],
   imports: [
     BrowserModule,
@@ -48,7 +50,7 @@ import {DropdownDirective} from '../shared/dropdown.directive';
     FamilyMemberzModule,
     ReunionsModule,
     AuthFormsModule,
-    ServiceWorkerModule.register('./ngsw-config.json', {enabled: environment.production})
+    ServiceWorkerModule.register('./ngsw-work.js', {enabled: environment.production})
   ],
   providers: [SiteDataProvider, ContactusService, DataStorageService, AuthGuard, AuthService, FirebaseAuth],
   bootstrap: [AppComponent]
