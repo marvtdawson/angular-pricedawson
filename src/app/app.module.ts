@@ -25,8 +25,8 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
 import { UserComponent } from './family-memberz/user/user.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
-import {DropdownDirective} from '../shared/dropdown.directive';
-import {FamilyMembersComponent} from './family-memberz/family-profiles/family-members/family-members.component';
+import { DropdownDirective} from '../shared/dropdown.directive';
+import { FamilyMembersComponent} from './family-memberz/family-profiles/family-members/family-members.component';
 
 
 @NgModule({
@@ -39,7 +39,7 @@ import {FamilyMembersComponent} from './family-memberz/family-profiles/family-me
     HeaderComponent,
     FooterComponent,
     DropdownDirective,
-    FamilyMembersComponent,
+    FamilyMembersComponent
   ],
   imports: [
     BrowserModule,
