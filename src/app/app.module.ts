@@ -27,6 +27,7 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { DropdownDirective} from '../shared/dropdown.directive';
 import { FamilyMembersComponent} from './family-memberz/family-profiles/family-members/family-members.component';
+import { AuthComponent } from './auth/auth.component';
 
 
 @NgModule({
@@ -39,7 +40,8 @@ import { FamilyMembersComponent} from './family-memberz/family-profiles/family-m
     HeaderComponent,
     FooterComponent,
     DropdownDirective,
-    FamilyMembersComponent
+    FamilyMembersComponent,
+    AuthComponent
   ],
   imports: [
     BrowserModule,
