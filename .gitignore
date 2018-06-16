@@ -42,5 +42,8 @@ testem.log
 .DS_Store
 Thumbs.db
 
+# backend
+/backend/app.server.js
+
 # src
 /src/app/app-firebase.config.ts
