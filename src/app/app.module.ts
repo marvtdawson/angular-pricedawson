@@ -6,10 +6,16 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireDatabase } from 'angularfire2/database-deprecated';
+import { AngularFireAuthModule } from 'angularfire2/auth';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { AngularFirestore } from 'angularfire2/firestore';
+import { FIREBASE_CONFIG } from './app-firebase.config';
 
 import { ContactusService } from '../services/contactus.service';
 import { DataStorageService } from '../services/data-storage.service';
-import { SiteDataProvider} from '../services/site-data.service.service';
+import { SiteDataProvider } from '../services/site-data.service.service';
 import { AuthGuard } from '../services/auth-guard.service';
 import { AuthService } from '../services/auth-service';
 import { FirebaseAuth } from './auth/firebase.auth';
@@ -25,8 +31,8 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
 import { UserComponent } from './family-memberz/user/user.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
-import { DropdownDirective} from '../shared/dropdown.directive';
-import { FamilyMembersComponent} from './family-memberz/family-profiles/family-members/family-members.component';
+import { DropdownDirective } from '../shared/dropdown.directive';
+import { FamilyMembersComponent } from './family-memberz/family-profiles/family-members/family-members.component';
 import { AuthComponent } from './auth/auth.component';
 
 
@@ -52,9 +58,21 @@ import { AuthComponent } from './auth/auth.component';
     FamilyMemberzModule,
     ReunionsModule,
     AuthFormsModule,
-    ServiceWorkerModule.register('./ngsw-work.js', {enabled: environment.production})
+    ServiceWorkerModule.register('./ngsw-work.js', {enabled: environment.production}),
+    AngularFireAuthModule,
+    AngularFireDatabaseModule,
+    AngularFireModule.initializeApp(FIREBASE_CONFIG),
   ],
-  providers: [SiteDataProvider, ContactusService, DataStorageService, AuthGuard, AuthService, FirebaseAuth],
+  providers: [
+    SiteDataProvider,
+    ContactusService,
+    DataStorageService,
+    AuthGuard,
+    AuthService,
+    FirebaseAuth,
+    AngularFireDatabase,
+    AngularFirestore,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
