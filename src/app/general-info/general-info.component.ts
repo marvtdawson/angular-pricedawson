@@ -2,7 +2,11 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-general-info',
-  templateUrl: './general-info.component.html',
+  template: `
+  <p>
+    general-info works!  Or did it really
+  </p>
+  `,
   styleUrls: ['./general-info.component.css']
 })
 export class GeneralInfoComponent implements OnInit {
