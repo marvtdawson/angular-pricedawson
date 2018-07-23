@@ -11,7 +11,7 @@ import { AngularFireDatabase } from 'angularfire2/database-deprecated';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFirestore } from 'angularfire2/firestore';
-import { FIREBASE_CONFIG } from './app-firebase.config';
+import { FIREBASE_CONFIG } from '../config/app-firebase.config';
 
 import { ContactusService } from '../services/contactus.service';
 import { DataStorageService } from '../services/data-storage.service';
