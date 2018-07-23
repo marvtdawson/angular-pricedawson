@@ -6,10 +6,10 @@ The NEW Price Dawson Family Reunion Site was created using a MEAN Stack.
 
 This project was generated with: 
 
-## Mongo version 3.
-# Express version 6
-Angular version 6
-Node version 9.
+### Mongo version 3.
+### Express version 6
+### Angular version 6
+### Node version 9.
 
 Angular CLI](https://github.com/angular/angular-cli) version 1.7.0.
 
