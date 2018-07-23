@@ -8,10 +8,14 @@ This project was generated with:
 
 ### Mongo version 3.
 ### Express version 6
-### Angular version 6
+### Angular version 5 / 6
+
+#### Angular CLI tool
+Angular CLI (https://github.com/angular/angular-cli) version 1.7.0.
+
 ### Node version 9.
 
-Angular CLI](https://github.com/angular/angular-cli) version 1.7.0.
+
 
 ## The old Price Dawson Site
 
