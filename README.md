@@ -17,11 +17,11 @@ Angular CLI (https://github.com/angular/angular-cli) version 1.7.0.
 
 
 
-## The old Price Dawson Site
+## The current Price Dawson site
 
 The original (old) site can be viewed at http://www.pricedawson.com
 
 ## The new Price Dawson site
 
-The current site can be viewed at http://www.pricedawson.org
+The current site can be viewed at http://www.pricedawson.org, this link will redirect via a AWS S3 link.
 
