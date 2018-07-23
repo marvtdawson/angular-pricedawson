@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # NEW Price Dawson Family Reunion Site
 
 ![pricedawson_screenshot](https://user-images.githubusercontent.com/28609667/41503278-b98cd134-7194-11e8-8619-b1788b7275f9.jpeg)
