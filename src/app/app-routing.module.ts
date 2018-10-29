@@ -25,8 +25,10 @@ import { SignoutComponent } from './auth/signout/signout.component';
 import { SigninComponent } from './auth/signin/signin.component';
 
 const appRoutes: Routes = [
-  {path: '', component: HomeComponent},
-  {path: 'family-memberz', canActivate: [AuthGuard], component: FamilyMemberzComponent, children: [
+  {path: '', redirectTo: '/home', pathMatch: 'full'},
+  {path: 'home', component: HomeComponent, },
+  {path: 'family-memberz', canActivate: [AuthGuard], component: FamilyMemberzComponent,
+    children: [
       {path: ':id/:name', component: UserComponent}
     ]},
   {path: 'reunions', component: ReunionsComponent, children: [

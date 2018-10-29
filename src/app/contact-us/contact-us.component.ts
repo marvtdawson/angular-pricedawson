@@ -34,10 +34,10 @@ export class ContactUsComponent implements OnInit {
     console.log('memberData');
   }
 
-  onSubmit(memberData) {
+  onSubmit() {
 
     console.log(this.contactusForm);
-    this.dataStorageService.storeContactusComments(memberData);
+   // this.dataStorageService.storeContactusComments();
   }
 
 }

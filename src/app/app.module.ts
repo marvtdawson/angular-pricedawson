@@ -1,17 +1,17 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { AppRoutingModule } from './app-routing.module';
-import { FormsModule } from '@angular/forms';
-import { ReactiveFormsModule } from '@angular/forms';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { AppRoutingModule } from './app-routing.module';;
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { AngularFireModule } from 'angularfire2';
-import { AngularFireDatabase } from 'angularfire2/database-deprecated';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
-import { AngularFirestore } from 'angularfire2/firestore';
+import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { FIREBASE_CONFIG } from '../config/app-firebase.config';
+import { AngularMaterialModule } from './angular-material.module';
 
 import { ContactusService } from '../services/contactus.service';
 import { DataStorageService } from '../services/data-storage.service';
@@ -62,6 +62,9 @@ import { AuthComponent } from './auth/auth.component';
     AngularFireAuthModule,
     AngularFireDatabaseModule,
     AngularFireModule.initializeApp(FIREBASE_CONFIG),
+    AngularFirestoreModule,
+    NgbModule.forRoot(),
+    AngularMaterialModule
   ],
   providers: [
     SiteDataProvider,
@@ -70,8 +73,6 @@ import { AuthComponent } from './auth/auth.component';
     AuthGuard,
     AuthService,
     FirebaseAuth,
-    AngularFireDatabase,
-    AngularFirestore,
   ],
   bootstrap: [AppComponent]
 })

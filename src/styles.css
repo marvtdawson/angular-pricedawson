@@ -1,17 +1,37 @@
 /* You can add global styles to this file, and also import other style files */
-.form-wrapper{
-  border: 1px solid #153a6c;
-  border-radius: 10px;
-  box-shadow: 3px 3px 3px #545454;
-  padding: 25px;;
-  margin: 20px 0 10px 0;
-  width: 40%;
+@import "~bootstrap/dist/css/bootstrap.css";
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+
+@media(min-width: 1200px) {
+  .main-content {
+    width: 70%;
+    margin: 175px auto 0;
+  }
+  .form-wrapper{
+    border: 1px solid #153a6c;
+    border-radius: 10px;
+    box-shadow: 3px 3px 3px #545454;
+    padding: 25px;;
+    margin: 20px 0 10px 0;
+    width: 40%;
+  }
+  .small-form-wrapper{
+    border: 1px solid #153a6c;
+    border-radius: 10px;
+    box-shadow: 3px 3px 3px #545454;
+    padding: 25px;;
+    margin: 20px 0 10px 0;
+    width: 35%;
+  }
+  .small-form-logo-wrapper{
+    width: 50%;
+    margin: 0 auto 0;
+    display: inline;
+  }
+  .small-form-logo-img{
+    width: 30%;
+    margin: 0 auto 0;
+  }
 }
-.small-form-wrapper{
-  border: 1px solid #153a6c;
-  border-radius: 10px;
-  box-shadow: 3px 3px 3px #545454;
-  padding: 25px;;
-  margin: 20px 0 10px 0;
-  width: 35%;
-}
+

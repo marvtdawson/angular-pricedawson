@@ -1,78 +1,57 @@
-<div class="row">
- <div class="page-header">
-    <div class="logo" >
-      <a [routerLink]="['/']">
-        <img src="../../assets/2017/family_shield.jpg" alt="" class="logo-img">
-        <!--i class="fas fa-shield-alt fa-9x"></i-->
-      </a>
-    </div>
+<!-- @ng-bootstrap/ng-bootsrap with mosh -->
+<nav
+  class="navbar navbar-expand-md navbar-light bg-light fixed-top" >
 
-    <div class="site-name" >
-      <h1> {{ title }} </h1>
-    </div>
+        <a class="navbar-brand" (click)="goToHomePage()">
+          <img class="logo-img animated bounce delay-2s" src="../../assets/2017/family_shield.jpg" alt="">
+          <span class="logo-text-wrapper animated fadeInDown delay-1s">{{ title | uppercase }}</span>
+        </a>
 
-    <div class="page-header-cta">
-      <div class="page-header-cta-content-wrapper">
-        <span style="color: #169256; font-weight: bold;">San Francisco Area</span><br>
-        <span>AUGUST 9 - 12, 2018</span><br>
-        <span><a [routerLink]="['/new-reunion']">Learn More...</a></span>
-      </div>
-    </div>
-   </div>
-</div>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-<nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav navbar-left">
-          <li role="presentation"
-              routerLinkActive="active"
-              class="dropdown" appDropdown>
-            <a target="_self" rel="noopener"
-               [routerLink]="['/reunions']"
-               class="dropdown-toggle"
-               data-toggle="dropdown"
-               role="button"
-               aria-haspopup="true"
-               aria-expanded="false">Reunions <span class="caret"></span></a>
-            <ul class="dropdown-menu">
-              <li><a [routerLink]="['/new-reunion']">New Reunion</a></li>
-              <li><a [routerLink]="['/past-reunions']">Past Reunion</a></li>
-            </ul>
-          </li>
-          <li role="presentation"
-              routerLinkActive="active">
-            <a target="_self" rel="noopener" [routerLink]="['/general-info']">General Info</a>
-          </li>
-          <li role="presentation"
-              routerLinkActive="active">
-            <a target="_self" rel="noopener" [routerLink]="['/committees']">Committees</a>
-          </li>
-          <li role="presentation"
-              routerLinkActive="active">
-            <a target="_self" rel="noopener" [routerLink]="['/family-profiles']">Family</a>
-          </li>
-          <li role="presentation"
-              routerLinkActive="active">
-            <a target="_self" rel="noopener" [routerLink]="['/mind-your-business']">Family Businesses</a>
-          </li>
-          <li role="presentation"
-              routerLinkActive="active">
-            <a target="_self" rel="noopener" [routerLink]="['/contact-us']">Contact Us</a>
-          </li>
-        </ul>
-        <ul class="login-nav">
-          <li role="presentation"
-              routerLinkActive="active">
-            <a target="_self" rel="noopener" [routerLink]="['/signout']">Logout</a>
-          </li>
-          <li role="presentation"
-              routerLinkActive="active">
-            <a target="_self" rel="noopener" [routerLink]="['/signin']">Login</a>
-          </li>
-        </ul>
-      </div>
+   <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+    <ul class="navbar-nav mr-auto nav-link-wrapper">
+
+      <li ngbDropdown class="nav-item-dropdown">
+        <a ngbDropdownToggle class="nav-link dropdown-toggle" id="dropdownRU" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          REUNIONS
+        </a>
+        <div ngbDropdownMenu class="dropdown-menu " aria-labelledby="dropdownRU">
+          <a class="dropdown-item" routerLink="/new-reunion">New Reunion</a>
+          <a class="dropdown-item" routerLink="/past-reunion">Past Reunion</a>
+        </div>
+      </li>
+      <li ngbDropdown class="nav-item-dropdown">
+        <a ngbDropdownToggle class="nav-link dropdown-toggle" id="dropdownGI" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" role="button">GENERAL INFO</a>
+        <div ngbDropdownMenu class="dropdown-menu" aria-labelledby="dropdownGI">
+          <a class="dropdown-item" routerLink="/family-committees">COMMITTEE</a>
+          <a class="dropdown-item" routerLink="/family-businesses">BUSINESS</a>
+        </div>
+      </li>
+      <li class="nav-item"><a routerLink="/contact-us" class="nav-link">CONTACT</a></li>
+      <li class="nav-item"><a routerLink="/signup" class="nav-link">SIGN UP</a></li>
+      <!--ng-template #anonymousUser-->
+        <li *ngIf="!user" class="nav-item">
+          <a class="nav-link" routerLink="/signin"><i class="far fa-user-circle"></i></a>
+        </li>
+      <!--/ng-template-->
+      <!--li *ngIf="adminService.user$ | async as user; else anonymousUser" ngbDropdown class="nav-item dropdown"-->
+      <li ngbDropdown class="nav-item dropdown" *ngIf="user">
+        <a ngbDropdownToggle class="nav-link dropdown-toggle" id="dropdownUserProf" data-toggle="dropdownUserProf" aria-haspopup="true" aria-expanded="false">{{ user.displayName }}</a>
+        <div ngbDropdownMenu class="dropdown-menu" aria-labelledby="dropdownUserProf">
+          <a class="dropdown-item">Profile</a>
+          <a class="dropdown-item">Notifications</a>
+          <a class="dropdown-item">Setting</a>
+          <a class="dropdown-item">Accounts</a>
+          <a class="dropdown-item" (click)="onLogout()">Logout </a>
+        </div>
+      </li>
+    </ul>
   </div>
+
 </nav>
+
 
 

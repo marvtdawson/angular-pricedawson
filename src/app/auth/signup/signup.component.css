@@ -1,11 +1,20 @@
-.small-form-wrapper{
-  width: 100%;
+.login-btn-wrapper {
+  align-content: center;
 }
-.small-form-logo-wrapper{
-  width: 50%;
-  margin: 0 auto 0;
+.btn {
+  align-self: center;
+  margin: 0 auto 15px;
+  width: 210px;
 }
-.small-form-logo-img{
-  width: 70%;
-  margin: 0 auto 0;
+.fab{
+  margin-right: 10px;
+}
+.sign-paragraph-wrapper {
+  margin: 200px auto 0;
+}
+.or-text{
+  text-align: center;
+  width: 210px;
+  margin: 0 auto;
+  padding: 5px;
 }
