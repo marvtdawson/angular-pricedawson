@@ -48,6 +48,7 @@
   .logo-text-wrapper {
     display: inline;
     color: #007bff;
+    margin-left: 1rem;
   }
 
   .logo-img-wrapper {
@@ -63,7 +64,7 @@
   .nav-link-wrapper {
     float: left;
     right: 2%;
-    width: 40%;
+    width: 30%;
     position: absolute;
   }
 
