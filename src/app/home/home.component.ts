@@ -18,7 +18,7 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
   }
 
-  loadNewReunion(){
+  loadNewReunion() {
     this.router.navigate(['/new-reunion']);
   }
 

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {SiteDataProvider} from '../../services/site-data.service.service';
-import {AuthService} from '../../services/auth-service';
+import {SiteDataProvider} from '../../../services/site-data.service.service';
+import {AuthService} from '../../../services/auth-service';
 
 @Component({
   selector: 'app-footer',

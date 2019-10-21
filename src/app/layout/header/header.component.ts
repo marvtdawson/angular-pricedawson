@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {SiteDataProvider} from '../../services/site-data.service.service';
-import {AuthService} from '../../services/auth-service';
+import {SiteDataProvider} from '../../../services/site-data.service.service';
+import {AuthService} from '../../../services/auth-service';
 import {Router} from '@angular/router';
 import * as firebase from 'firebase';
 import {AngularFireAuth} from '@angular/fire/auth';
