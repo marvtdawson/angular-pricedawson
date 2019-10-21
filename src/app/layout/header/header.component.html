@@ -1,6 +1,6 @@
 <!-- @ng-bootstrap/ng-bootsrap with mosh -->
 <nav
-  class="navbar navbar-expand-md navbar-light bg-light fixed-top" >
+  class="navbar navbar-expand-md navbar-light fixed-top" >
 
         <a class="navbar-brand" (click)="goToHomePage()">
           <img class="logo-img animated bounce delay-2s" src="../../../assets/2017/family_shield.jpg" alt="">
@@ -19,15 +19,15 @@
           REUNIONS
         </a>
         <div ngbDropdownMenu class="dropdown-menu " aria-labelledby="dropdownRU">
-          <a class="dropdown-item" routerLink="/new-reunion">New Reunion</a>
-          <a class="dropdown-item" routerLink="/past-reunion">Past Reunion</a>
+          <a class="dropdown-item" routerLink="reunions/new-reunion">New Reunion</a>
+          <a class="dropdown-item" routerLink="reunions/past-reunions">Past Reunions</a>
         </div>
       </li>
       <li ngbDropdown class="nav-item-dropdown">
         <a ngbDropdownToggle class="nav-link dropdown-toggle" id="dropdownGI" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" role="button">GENERAL INFO</a>
         <div ngbDropdownMenu class="dropdown-menu" aria-labelledby="dropdownGI">
-          <a class="dropdown-item" routerLink="/family-committees">COMMITTEE</a>
-          <a class="dropdown-item" routerLink="/family-businesses">BUSINESS</a>
+          <a class="dropdown-item" routerLink="/family-committees">COMMITTEES</a>
+          <a class="dropdown-item" routerLink="/family-businesses">BUSINESSES</a>
         </div>
       </li>
       <li class="nav-item"><a routerLink="/contact-us" class="nav-link">CONTACT</a></li>

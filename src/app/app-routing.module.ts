@@ -32,9 +32,10 @@ const appRoutes: Routes = [
       {path: ':id/:name', component: UserComponent}
     ]},
   {path: 'reunions', component: ReunionsComponent, children: [
-    {path: 'new-reunion', component: NewReunionComponent},
-    {path: 'past-reunions', component: PastReunionsComponent}
-    ]},
+      {path: 'new-reunion', component: NewReunionComponent},
+      {path: 'past-reunions', component: PastReunionsComponent}
+    ]
+  },
   {path: 'general-info', component: GeneralInfoComponent},
   {path: 'contact-us', component: ContactUsComponent},
   {path: 'family-committees', canActivate: [AuthGuard], component: FamilyCommitteesComponent, children: [
