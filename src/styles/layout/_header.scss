@@ -1,0 +1,82 @@
+/** Small devices (landscape phones, 576px and up) **/
+@media (min-width: 320px) {
+  .logo-wrapper { /* -- Mast Head Logo Container @ 1920 PX -- */
+    height: 35px;
+    width: 47%;
+    display: inline;
+  }
+
+  .logo-text-wrapper {
+    display: inline;
+    color: #007bff;
+  }
+
+  .logo-img-wrapper {
+    display: inline;
+    margin-left: 10px;
+  }
+
+  .logo-img {
+    width: 12%;
+    border-radius: 75px;
+  }
+}
+
+/**  Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {  }
+
+/**  Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {  }
+
+/**   Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { }
+
+/** Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+
+  .logo-row-wrapper{
+    width: 100%;
+  }
+
+  .logo-wrapper { /* -- Mast Head Logo Container @ 1920 PX -- */
+    margin: 0 0 0 150px;
+    height: 100px;
+    width: 30%;
+    display: inline;
+  }
+
+  .logo-text-wrapper {
+    display: inline;
+    color: #007bff;
+    margin-left: 1rem;
+  }
+
+  .logo-img-wrapper {
+    display: inline;
+    margin-left: 10px;
+  }
+
+  .logo-img {
+    width: 10%;
+    border-radius: 75px;
+  }
+
+  .nav-link-wrapper {
+    float: left;
+    right: 2%;
+    width: 30%;
+    position: absolute;
+  }
+
+  .dropdown-toggle {
+    cursor: pointer;
+  }
+
+  .navbar-light .navbar-nav .nav-link {
+    color: #007bff;
+  }
+  .site-name {
+    width: 20%;
+    display: inline;
+  }
+}
