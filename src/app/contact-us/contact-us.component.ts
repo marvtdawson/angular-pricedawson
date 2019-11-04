@@ -40,4 +40,14 @@ export class ContactUsComponent implements OnInit {
    // this.dataStorageService.storeContactusComments();
   }
 
+  onMouseOut(event) {
+    const yahoo = '@yahoo.com';
+    const gmail = '@gmail.com';
+
+    if (this) {
+
+    }
+
+  }
+
 }

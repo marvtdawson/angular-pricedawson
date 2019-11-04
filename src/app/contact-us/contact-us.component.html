@@ -25,7 +25,7 @@
                     class="form-control"
                     id="email"
                     email
-                    formControlName="email">
+                    formControlName="email" (mouseleave)="onMouseOut($event)">
             <span *ngIf="!contactusForm.get('memberData.email').valid && contactusForm.get('memberData.email').touched"
                   class="help-block">Please Enter a Valid Email Address.</span>
           </div>
