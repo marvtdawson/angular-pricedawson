@@ -5,7 +5,7 @@ import { ActivatedRoute, Router} from '@angular/router';
 import { AngularFireDatabase } from '@angular/fire/database';
 import { Observable } from 'rxjs/Observable';
 import { HttpClient } from '@angular/common/http';
-import * as firebase from 'firebase';
+import * as firebase from 'firebase/app';
 
 @Injectable()
 export class AuthService {

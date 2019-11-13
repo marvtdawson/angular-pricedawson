@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {SiteDataProvider} from '../../../services/site-data.service.service';
 import {AuthService} from '../../../services/auth-service';
 import {Router} from '@angular/router';
-import * as firebase from 'firebase';
+import * as firebase from 'firebase/app';
 import {AngularFireAuth} from '@angular/fire/auth';
 
 @Component({
