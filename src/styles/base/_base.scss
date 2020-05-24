@@ -1,0 +1,47 @@
+// COLOR VARIABLES
+$color-primary: #c69963;
+$color-primary-dark: #B28451;
+$color-black: #000;
+
+$color-secondary: #101d2c;
+
+$color-grey-light-1: #f9f7f6;
+$color-grey-light-2: #aaa;
+
+$color-grey-dark-1: #54483A;
+$color-grey-dark-2: #6D5D4B;
+
+// FONT VARIABLES
+$font-primary: 'Nunito', sans-serif;
+$font-display: 'Josefin Sans', sans-serif;
+
+// FONT COLOR
+$font-primary-color: #ffffff;
+$font-secondary-color: #54483A;
+
+// FONT SIZES
+$font-primary-content-size: 1.6rem;
+$font-primary-card-content-size: 1.6rem;
+$font-primary-btn-text-size: 1.4rem;
+$font-form-title-size: 1.6rem;
+$font-form-text-size: 1.6rem;
+$font-dropdown-size: 1.4rem;
+$font-footer-btn: 1.4rem;
+
+// BUTTON VARIABLE
+$btn-hover-primary: #ff4f00;
+
+// RESPONSIVE BREAKPOINTS
+$bp-largest-plus: 81.25em; // 1300px view point = 1300 / 16 = 81.25
+$bp-largest: 75em; // 1200px view point = 1200 / 16 = 75
+$bp-larger: 68.75em; // 1100px view point = 1100 / 16 = 68.75
+$bp-larger-1024: 64em; // 1024px view point = 1024 / 16 = 64
+$bp-large: 62.5em; // 1000px view point = 1000 / 16 = 62.5
+$bp-medium-larger: 56.25em; // 900px view point = 900 / 16 = 56.25
+$bp-medium-large: 50em; // 800px view point = 800 / 16 = 50
+$bp-medium: 48em; // 768px view point = 768 / 16 = 48
+$bp-medium-small: 37.5em; // 600px view point = 600 / 16 = 37.5
+$bp-small: 35.5em ; // 568px view point = 568 / 16 = 35.5
+$bp-smaller: 25.8em; // 414px view point = 414 / 16 = 25.8
+$bp-smaller-1: 23.43em; // 375px view point = 375 / 16 = 23.43
+$bp-smallest: 20em; // 320px view point = 320 / 16 = 20

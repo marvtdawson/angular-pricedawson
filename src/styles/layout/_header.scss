@@ -1,86 +1,93 @@
-.navbar {
-  background-color: $color-light-background;
-}
+.header {
+  width: 100%;
+  height: 90rem;
+  position: relative;
 
-/** Small devices (landscape phones, 576px and up) **/
-@media (min-width: 320px) {
-  .logo-wrapper { /* -- Mast Head Logo Container @ 1920 PX -- */
-    height: 35px;
-    width: 47%;
-    display: inline;
-  }
+  grid-column: full-start / col-end 6;
+  align-items: center;
+  /*clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);*/
 
-  .logo-text-wrapper {
-    display: inline;
-    color: #007bff;
-  }
-
-  .logo-img-wrapper {
-    display: inline;
-    margin-left: 10px;
-  }
-
-  .logo-img {
-    width: 12%;
-    border-radius: 75px;
-  }
-}
-
-/**  Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) {  }
-
-/**  Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) {  }
-
-/**   Large devices (desktops, 992px and up) */
-@media (min-width: 992px) { }
-
-/** Extra large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) {
-
-  .logo-row-wrapper{
+  .bg-jumbotron {
     width: 100%;
+    height: 90rem;
+    transition: all .5s;
+    background-image: linear-gradient(
+        rgba(16, 29, 44, .50),
+        rgba(16, 29, 44, .50)),
+    url('/src/assets/icon/logo/family_shield.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .bg-jumbotron:hover .bg-jumbotron,
+  .bg-jumbotron:focus .bg-jumbotron {
+    transform: scale(1.1);
   }
 
-  .logo-wrapper { /* -- Mast Head Logo Container @ 1920 PX -- */
-    margin: 0 0 0 150px;
-    height: 100px;
-    width: 30%;
-    display: inline;
+  &__banner-img{
+    height: 30rem;
   }
 
-  .logo-text-wrapper {
-    display: inline;
-    color: #007bff;
-    margin-left: 1rem;
-  }
-
-  .logo-img-wrapper {
-    display: inline;
-    margin-left: 10px;
-  }
-
-  .logo-img {
-    width: 10%;
-    border-radius: 75px;
-  }
-
-  .nav-link-wrapper {
-    float: left;
-    right: 2%;
-    width: 30%;
+  /** summary **/
+  &__summary-wrapper {
     position: absolute;
-  }
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    align-self: center;
+    justify-self: center;
 
-  .dropdown-toggle {
-    cursor: pointer;
-  }
+    @media only screen and (min-width: $bp-medium) {
+      width: 70%;
+    }
 
-  .navbar-light .navbar-nav .nav-link {
-    color: #007bff;
-  }
-  .site-name {
-    width: 20%;
-    display: inline;
+    @media only screen and (min-width: $bp-smallest) {
+      width: 80%;
+      left: 48%;
+      top: 45rem;
+      color: $font-primary-color;
+      font-size: 2rem;
+    }
+
+    &__content {
+      margin: 0 auto 0;
+      font-size: 18px;
+    }
+
+    &__btn {
+      width: 200px;
+      height: 50px;
+      border: 2px solid #fff;
+      text-align: center;
+      color: #fff;
+      font-weight: bold;
+      font-size: $font-primary-btn-text-size;
+      position: relative;
+      border-radius: 2px;
+      display: block;
+
+      @media only screen and(min-width: $bp-smallest) {
+        margin: 5rem auto 0;
+        position: relative;
+      }
+
+      &__span {
+        top: 1.2rem;
+        position: relative;
+        background: none;
+        display: grid;
+        align-self: center;
+        justify-self: center;
+
+        @media only screen and (max-width: $bp-largest) {
+          top: 1.7rem;
+        }
+
+      }
+    }
+
+    &__btn:hover {
+      background: orangered;
+      cursor: pointer;
+    }
   }
 }
